@@ -10,9 +10,9 @@
 
 [user]
         # The name you want to appear as the author of your commits
-        name = <YOUR NAME>
+        name = John Emau
 	# The e-mail address that is associated to the author of your commits
-        email = <YOUR EMAIL>
+        email = john.emau@datadoghq.com
 # This next section is optional and can be omitted if you do not use ssh git
 # commit signing.  However, doing so is highly encouraged, and if you have not
 # started using this workflow, see the onboarding docs for that:
@@ -20,11 +20,11 @@
 #         # This is an ssh key that can be used to sign your commits, it should
 #         # be made available to your workspace via ssh agent forwarding and can be
 #         # seen on your laptop by issuing `git config --global user.signingkey`
-#         signingkey = <YOUR COMMIT SIGNING PUBLIC KEY>
-# [commit]
-# 	gpgsign = true
-# [gpg]
-# 	format = ssh
+          signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPq+hUlxV+9EEXxiYXzVWqpKzivfD6u/sma6SdPqjTq4 john.emau+git-commit-signing@datadoghq.com
+[commit]
+	gpgsign = true
+[gpg]
+	format = ssh
 
 
 # This is a url rewrite that helps [go and maybe rust] tooling that downloads libraries from our private repos
