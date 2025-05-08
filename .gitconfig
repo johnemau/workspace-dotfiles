@@ -20,7 +20,7 @@
 #         # This is an ssh key that can be used to sign your commits, it should
 #         # be made available to your workspace via ssh agent forwarding and can be
 #         # seen on your laptop by issuing `git config --global user.signingkey`
-        signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICleiIYTIlBCrl/Mech0MSRxCyCPvqThuVE8Ht3cnqHD john.emau+git-commit-signing@datadoghq.com
+        signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKXlrtBPrMC2F5PWg0lXcR9gtTL1ihBNC4Vkj6egjHrv john.emau+git-commit-signing@datadoghq.com
 [commit]
 	gpgsign = true
 [tag]
