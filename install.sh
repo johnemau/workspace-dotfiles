@@ -24,3 +24,9 @@ while read df; do
   mkdir -p "$(dirname "$link")"
   ln -sf "$df" "$link"
 done
+
+# https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+# https://github.com/pup-mikegraf/workspace-dotfiles/blob/87fcbaff976e2c20a09ff3d0d8fd2e42553d09a2/install.sh#L32C1-L32C32
+touch $HOME/.dotfiles_installed
