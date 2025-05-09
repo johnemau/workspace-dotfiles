@@ -15,6 +15,9 @@
 
 set -euo pipefail
 
+# Print the line number and command that caused the failure
+trap 'echo "Error on line $LINENO: $BASH_COMMAND"' ERR
+
 DOTFILES_PATH="$HOME/dotfiles"
 
 # Symlink dotfiles to the root within your workspace
