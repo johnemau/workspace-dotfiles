@@ -34,11 +34,21 @@
     allowedSignersFile = /Users/john.emau/.config/gitsign/allowed-signers
 [core]
     hooksPath = /usr/local/dd/global_hooks
+    editor = code --wait
 [push]
     default = upstream
 [pager]
     branch = false
     log = false
+
+[diff]
+  tool = vscode
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+  tool = vscode
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
 
 # This is a url rewrite that helps [go and maybe rust] tooling that downloads libraries from our private repos
 [url "git@github.com:DataDog/"]
