@@ -36,6 +36,9 @@
     hooksPath = /usr/local/dd/global_hooks
 [push]
     default = upstream
+[pager]
+    branch = false
+    log = false
 
 # This is a url rewrite that helps [go and maybe rust] tooling that downloads libraries from our private repos
 [url "git@github.com:DataDog/"]
