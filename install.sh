@@ -73,5 +73,8 @@ curl -sS https://starship.rs/install.sh | sh -s -- -y
 	&& sudo apt-get update \
 	&& sudo apt-get install gh -y
 
+ # install rapid
+ update-tool rapid
+
 # https://github.com/pup-mikegraf/workspace-dotfiles/blob/87fcbaff976e2c20a09ff3d0d8fd2e42553d09a2/install.sh#L32C1-L32C32
 touch $HOME/.dotfiles_installed
