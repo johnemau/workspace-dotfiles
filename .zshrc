@@ -8,6 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+# https://harshithashok.com/tools/oh-my-zsh-with-starship/
 ZSH_THEME=""
 
 # Set list of themes to pick from when loading at random
@@ -124,8 +125,14 @@ bindkey '^[[B' history-search-forward
 # https://github.com/zsh-users/zsh-autosuggestions/issues/682
 bindkey '^[[C' forward-word
 
-# https://starship.rs/guide/
+# https://starship.rs/guide/#%F0%9F%9A%80-installation
 eval "$(starship init zsh)"
+
+# https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation
+eval "$(zoxide init zsh)"
+
+# https://github.com/eza-community/eza/blob/main/INSTALL.md#add-the-completion-path-to-your-zsh-configuration
+export FPATH="~/.oh-my-zsh/custom/completions/eza/completions/zsh:$FPATH"
 
 # Turn on autocompletion
 # https://stackoverflow.com/questions/24513873/git-tab-completion-not-working-in-zsh-on-mac/58517668#58517668
