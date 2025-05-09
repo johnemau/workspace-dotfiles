@@ -14,6 +14,7 @@
 # we've included a block of code below for your convenience that does just that.
 
 set -euo pipefail
+set -x
 
 # Print the line number and command that caused the failure
 trap 'echo "Error on line $LINENO: $BASH_COMMAND"' ERR
