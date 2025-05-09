@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME=""
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -73,6 +73,7 @@ ZSH_THEME="robbyrussell"
 plugins=(
     git
     zsh-autosuggestions
+    zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -105,3 +106,27 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# https://www.josean.com/posts/how-to-setup-alacritty-terminal
+# history setup
+HISTFILE=$HOME/.zhistory
+SAVEHIST=1000
+HISTSIZE=999
+setopt share_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt hist_verify
+
+# completion using arrow keys (based on history)
+bindkey '^[[A' history-search-backward
+bindkey '^[[B' history-search-forward
+
+# https://github.com/zsh-users/zsh-autosuggestions/issues/682
+bindkey '^[[C' forward-word
+
+# https://starship.rs/guide/
+eval "$(starship init zsh)"
+
+# Turn on autocompletion
+# https://stackoverflow.com/questions/24513873/git-tab-completion-not-working-in-zsh-on-mac/58517668#58517668
+autoload -Uz compinit && compinit
