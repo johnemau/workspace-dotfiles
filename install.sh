@@ -30,20 +30,20 @@ while read df; do
 done
 
 # https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh
-HOME=/foo git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 # https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh
-HOME=/foo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # https://github.com/eza-community/eza/blob/main/INSTALL.md#clone-the-repository
-HOME=/foo git clone https://github.com/eza-community/eza.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/completions/eza
+git clone https://github.com/eza-community/eza.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/completions/eza
 
 # https://medium.com/@almatins/install-nerdfont-or-any-fonts-using-the-command-line-in-debian-or-other-linux-f3067918a88c
 wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FiraCode.zip \
-&& cd ~/.local/share/fonts \
-&& unzip FiraCode.zip \
-&& rm FiraCode.zip \
-&& fc-cache -fv
+    && cd ~/.local/share/fonts \
+    && unzip FiraCode.zip \
+    && rm FiraCode.zip \
+    && fc-cache -fv
 
 # https://github.com/eza-community/eza/blob/main/INSTALL.md#debian-and-ubuntu
 sudo apt-get update
