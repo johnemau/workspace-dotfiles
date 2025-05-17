@@ -38,6 +38,9 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 # https://github.com/eza-community/eza/blob/main/INSTALL.md#clone-the-repository
 git clone https://github.com/eza-community/eza.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/completions/eza
 
+# wait because github may return 429 (too many requests)
+sleep .5
+
 # https://medium.com/@almatins/install-nerdfont-or-any-fonts-using-the-command-line-in-debian-or-other-linux-f3067918a88c
 wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FiraCode.zip \
     && cd ~/.local/share/fonts \
@@ -48,6 +51,9 @@ wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/do
 # https://github.com/eza-community/eza/blob/main/INSTALL.md#debian-and-ubuntu
 sudo apt-get update
 sudo apt-get --assume-yes install gpg
+
+# wait because github may return 429 (too many requests)
+sleep .5
 
 # # https://github.com/eza-community/eza/blob/main/INSTALL.md#debian-and-ubuntu
 sudo mkdir -p /etc/apt/keyrings
@@ -60,6 +66,9 @@ sudo apt-get --assume-yes install eza
 # https://starship.rs/guide/
 curl -sS https://starship.rs/install.sh | sh -s -- -y
 
+# wait because github may return 429 (too many requests)
+sleep .5
+
 # https://github.com/cli/cli/blob/trunk/docs/install_linux.md#debian-ubuntu-linux-raspberry-pi-os-apt
 (type -p wget >/dev/null || (sudo apt-get update && sudo apt-get install wget -y)) \
 	&& sudo mkdir -p -m 755 /etc/apt/keyrings \
@@ -70,10 +79,10 @@ curl -sS https://starship.rs/install.sh | sh -s -- -y
 	&& sudo apt-get update \
 	&& sudo apt-get install gh -y
 
- # install rapid
- update-tool rapid
+# install rapid
+update-tool rapid
 
-# wait because the next cURL can return 429 (too many requests)
+# wait because github may return 429 (too many requests)
 sleep .5
 
 # https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation
