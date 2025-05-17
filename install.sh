@@ -57,9 +57,6 @@ sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.lis
 sudo apt-get update
 sudo apt-get --assume-yes install eza
 
-# https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation
-curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
-
 # https://starship.rs/guide/
 curl -sS https://starship.rs/install.sh | sh -s -- -y
 
@@ -75,6 +72,12 @@ curl -sS https://starship.rs/install.sh | sh -s -- -y
 
  # install rapid
  update-tool rapid
+
+# wait because the next cURL can return 429 (too many requests)
+sleep .5
+
+# https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation
+curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 
 # https://github.com/pup-mikegraf/workspace-dotfiles/blob/87fcbaff976e2c20a09ff3d0d8fd2e42553d09a2/install.sh#L32C1-L32C32
 touch $HOME/.dotfiles_installed
