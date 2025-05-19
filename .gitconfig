@@ -36,6 +36,7 @@
     hooksPath = /usr/local/dd/global_hooks
     editor = code --wait
 [push]
+    autoSetupRemote = true
     default = upstream
 [pager]
     branch = false
