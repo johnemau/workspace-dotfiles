@@ -40,9 +40,7 @@
     default = upstream
 [pager]
     branch = false
-    config = false
     log = false
-    show = false
 
 [diff]
   tool = vscode
