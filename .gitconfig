@@ -40,9 +40,6 @@
 [push]
     autoSetupRemote = true
     default = upstream
-[pager]
-    branch = false
-    log = false
 
 [diff]
   tool = vscode
