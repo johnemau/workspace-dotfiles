@@ -35,6 +35,8 @@
 [core]
     hooksPath = /usr/local/dd/global_hooks
     editor = code --wait
+    # https://medium.com/pragmatic-programmers/git-config-core-pager-807e17d64243
+    pager = less -F
 [push]
     autoSetupRemote = true
     default = upstream
