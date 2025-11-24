@@ -2,7 +2,6 @@ shell: zsh
 region: us-east-1
 dotfiles: https://github.com/johnemau/workspace-dotfiles
 editor: cursor
-vscode-template: "dd-source"
 vscode-extensions:
 - "anthropic.claude-code"
 - "openai.chatgpt"
