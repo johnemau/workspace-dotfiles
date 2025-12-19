@@ -137,3 +137,7 @@ export FPATH="~/.oh-my-zsh/custom/completions/eza/completions/zsh:$FPATH"
 # Turn on autocompletion
 # https://stackoverflow.com/questions/24513873/git-tab-completion-not-working-in-zsh-on-mac/58517668#58517668
 autoload -Uz compinit && compinit
+
+# Turn on autocompletion for git dd
+# https://datadoghq.atlassian.net/wiki/spaces/FF/pages/5695472050/Git+dd#On-Linux
+eval "$(git-dd completions-zsh)"
