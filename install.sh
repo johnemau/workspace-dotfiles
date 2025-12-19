@@ -83,6 +83,7 @@ sleep .5
 update-tool rapid
 
 # install git dd
+# https://datadoghq.atlassian.net/wiki/spaces/FF/pages/5695472050/Git+dd#On-macOS
 update-tool git-dd
 
 # wait because github may return 429 (too many requests)
