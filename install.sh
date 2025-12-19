@@ -82,6 +82,9 @@ sleep .5
 # install rapid
 update-tool rapid
 
+# install git dd
+update-tool git-dd
+
 # wait because github may return 429 (too many requests)
 sleep .5
 
