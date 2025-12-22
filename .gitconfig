@@ -42,21 +42,21 @@
     default = upstream
 
 [diff]
-  tool = vscode
+    tool = vscode
 [difftool "vscode"]
-  cmd = code --wait --diff $LOCAL $REMOTE
+    cmd = code --wait --diff $LOCAL $REMOTE
 [merge]
-  tool = vscode
+    tool = vscode
 [mergetool "vscode"]
-  cmd = code --wait $MERGED
+    cmd = code --wait $MERGED
 
 # https://datadoghq.atlassian.net/wiki/spaces/FF/pages/4594926370/Git+performance+settings+for+large+repos#feature.manyfiles
 [feature]
-  manyFiles = true
+    manyFiles = true
 
 # https://datadoghq.atlassian.net/wiki/spaces/FF/pages/4594926370/Git+performance+settings+for+large+repos#index.threads
 [index]
-  threads = true
+    threads = true
 
 # This is a url rewrite that helps [go and maybe rust] tooling that downloads libraries from our private repos
 [url "git@github.com:DataDog/"]
