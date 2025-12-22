@@ -50,6 +50,14 @@
 [mergetool "vscode"]
   cmd = code --wait $MERGED
 
+# https://datadoghq.atlassian.net/wiki/spaces/FF/pages/4594926370/Git+performance+settings+for+large+repos#feature.manyfiles
+[feature]
+  manyFiles = true
+
+# https://datadoghq.atlassian.net/wiki/spaces/FF/pages/4594926370/Git+performance+settings+for+large+repos#index.threads
+[index]
+  threads = true
+
 # This is a url rewrite that helps [go and maybe rust] tooling that downloads libraries from our private repos
 [url "git@github.com:DataDog/"]
     insteadOf = https://github.com/DataDog/
